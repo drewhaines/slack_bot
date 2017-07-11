@@ -9,4 +9,8 @@ class Bot < SlackRubyBot::Bot
     Rails.cache.write next_id, { text: match['expression'] }
     client.say(channel: data.channel, text: match['expression'])
   end
+
+  command 'time' do |client, data, match|
+    client.say(channel: data.channel, text: Time.now.to_s)
+  end
 end
