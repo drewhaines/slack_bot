@@ -46,7 +46,7 @@ gem 'pry'
 # gem 'capistrano-rails', group: :development
 
 # Slack Bot
-gem 'slack-ruby-bot'
+gem 'slack-ruby-bot', :git => 'git@github.com:slack-ruby/slack-ruby-bot.git'
 
 # HAML
 gem 'haml-rails'
