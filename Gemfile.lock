@@ -6,7 +6,7 @@ GIT
     json (1.8.6)
 
 GIT
-  remote: git@github.com:slack-ruby/slack-ruby-bot.git
+  remote: https://github.com/slack-ruby/slack-ruby-bot.git
   revision: 700123c68e65c49ddaaf02364c7ef58c879d6777
   specs:
     slack-ruby-bot (0.10.5)
