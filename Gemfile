@@ -48,6 +48,7 @@ gem 'pry'
 # Slack Bot
 gem 'slack-ruby-bot', :git => 'https://github.com/slack-ruby/slack-ruby-bot.git'
 gem 'celluloid-io'
+gem 'giphy'
 
 # HAML
 gem 'haml-rails'

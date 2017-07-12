@@ -50,6 +50,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
     babel-source (5.8.34)
     babel-transpiler (0.7.0)
@@ -104,6 +106,15 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
+    faraday_middleware-parse_oj (0.3.2)
+      faraday (~> 0.9)
+      faraday_middleware (>= 0.9.1, < 1.0)
+      oj (>= 2.0, < 4.0)
+    giphy (3.0.0)
+      faraday (~> 0.9)
+      faraday_middleware (~> 0.9)
+      faraday_middleware-parse_oj (~> 0.3)
+      launchy (~> 2.4)
     gli (2.16.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -133,6 +144,8 @@ GEM
     js-routes (1.2.1)
       railties (>= 3.2)
       sprockets-rails (< 3)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -154,6 +167,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    public_suffix (2.0.5)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -273,6 +287,7 @@ DEPENDENCIES
   celluloid-io
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  giphy
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
