@@ -1,32 +1,36 @@
 class Bot < SlackRubyBot::Bot
   @id = 0
 
+  # client = Slack::Web::Client.new
+  # client.auth_test
+  # client.chat_postMessage(channel: '#general', text: 'Hello World', as_user: true)
+
   def self.next_id
     @id = @id % 10 + 1
   end
 
   help do
-    title 'Fairway Bot'
-    desc 'This bot does various things that make life at Fairway easier. =)'
+    title 'Bot Boy'
+    desc 'This bot helps log data for the Monday Morning Meetings.'
 
     command 'ping' do
-      desc 'Responds with "pong" to let you know Fairway Bot is running.'
+      desc 'Responds with "pong" to let you know Bot Boy is running.'
     end
 
     command 'hi' do
-      desc 'Fairway Bot politely says hello.'
+      desc 'Bot Boy politely says hello.'
     end
 
     command 'say <expression>' do
-      desc 'Fairway Bot repeats your expression and logs it at https://fairbot.herokuapp.com.'
+      desc 'Bot Boy repeats your expression and logs it at https://fairbot.herokuapp.com.'
     end
 
     command 'time' do
-      desc 'Fairway Bot tells you the time (Pacific Timezone).'
+      desc 'Bot Boy tells you the time (Pacific Timezone).'
     end
 
     command 'gif me <expression>' do
-      desc 'Fairway Bot responds with a gif for your expression.'
+      desc 'Bot Boy responds with a gif for your expression.'
     end
   end
 
@@ -36,6 +40,7 @@ class Bot < SlackRubyBot::Bot
   end
 
   command 'say' do |client, data, match|
+    binding.pry
     Rails.cache.write next_id, { text: match['expression'] }
     client.say(channel: data.channel, text: match['expression'])
   end
